@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech India</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="website.jpg">
+    <link rel="icon" type="image/png" sizes="32x32" href="fav.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="fav.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        header {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-align: center;
+            font: 50px bold;
+            padding: 50px;
+            background-color: rgb(17, 243, 220);
+        }
+
+        nav {
+            /*display: block nav a; overflow:hidden in nav;*/
+            /*float: left; in nav a so that it be on horizontal nav a*/
+            display: grid;
+            padding: 40px;
+            color: rgb(12, 150, 136);
+            margin: 0;
+            font-weight: bold;
+            position: sticky;
+            top: 0px;
+            background-color: rgb(245, 245, 245);
+            display: flex;
+
+
+        }
+
+        nav a:hover {
+            padding: 5px;
+            background-color: rgba(252, 186, 186, 0.993);
+        }
+
+        /* Add a black background color to the top navigation bar */
+
+
+        .banner {
+            background-image: url("banner.png");
+        }
+
+        main {
+            margin: 0 auto;
+            max-width: 800px;
+            width: 50%;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .first {
+            text-align: center;
+        }
+
+        .d {
+            display: grid;
+            padding: 20px;
+            background-color: rgb(130, 238, 206);
+            grid-template-columns: repeat(4, 1fr);
+            margin: 5px;
+        }
+
+        /* external css: flickity.css */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+
+        footer {
+            position: relative;
+        }
+
+        .back {
+            font-family: cursive;
+            list-style: none;
+
+        }
+
+        .alg a:hover {
+            background-color: rgba(21, 211, 211, 0.877);
+        }
+
+        .flex-align-left {
+            margin-right: auto;
+        }
+
+        section h1 span {
+            background: linear-gradient(to right, #f5d837, #bbb812);
+            padding: 90px, 95px;
+            border-radius: 30px;
+            color: white;
+        }
+
+        .pic {
+            border: rgb(16, 19, 19);
+            border-radius: 50%;
+            position: centre;
+        }
+
+
+        .alg a {
+            text-align: center;
+            background-color: rgba(240, 150, 16, 0.582);
+            padding: 5px;
+            border-radius: 10px;
+            margin: 5px;
+            text-decoration: none;
+
+
+        }
+
+
+
+        .alg a:hover {
+            background-color: rgba(30, 30, 30 / 25%);
+        }
+
+        .alg a i {
+            margin: 10px;
+
+        }
+
+        .yt {
+            color: #FF0000;
+        }
+
+        .ins {
+            color: #dd2a7b;
+
+        }
+
+        .fb {
+            color: #3b5998;
+        }
+
+        .link {
+            color: #0072b1;
+        }
+
+        .d {
+            display: grid;
+            list-style: none;
+
+        }
+
+        .text {
+            padding: 20px;
+        }
+
+        .text a {
+            list-style: none;
+            text-decoration: none;
+            color: black;
+            margin: 1px;
+        }
+
+        .text a:hover {
+
+            color: chocolate;
+        }
+
+        .con {
+
+            margin: 8px;
+            padding: 10px;
+            position: fixed;
+            border: 3px solid rgb(245, 245, 245);
+
+
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+        }
+
+        .carousel {
+            background: #EEE;
+        }
+
+        .carousel-cell {
+            width: 66%;
+            height: 200px;
+            margin-right: 10px;
+            background: #8C8;
+            border-radius: 5px;
+            counter-increment: gallery-cell;
+        }
+
+        /* cell number */
+        .carousel-cell:before {
+            display: block;
+            text-align: center;
+            content: counter(gallery-cell);
+            line-height: 200px;
+            font-size: 80px;
+            color: white;
+        }
+
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+        }
+
+        */ * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+        }
+
+
+
+
+
+        /* smaller, dark, rounded square */
+        .flickity-prev-next-button {
+            width: 30px;
+            height: 30px;
+            border-radius: 5px;
+            background: #333;
+        }
+
+        .flickity-prev-next-button:hover {
+            background: #F90;
+        }
+
+        /* arrow color */
+        .flickity-prev-next-button .arrow {
+            fill: white;
+        }
+
+        .flickity-prev-next-button.no-svg {
+            color: white;
+        }
+
+        /* position outside */
+        .flickity-prev-next-button.previous {
+            left: -40px;
+        }
+
+        .flickity-prev-next-button.next {
+            right: -40px;
+        }
+
+        .sc input[type=text] {
+            float: none;
+            display: block;
+            text-align: left;
+            width: 80%;
+            margin: 0;
+            padding: 14px;
+        }
+
+        .sc input[type=text] {
+            border: 1px solid #ccc;
+        }
+
+        .sc input[type=text] {
+            float: right;
+            padding: 6px;
+            border: none;
+            margin-top: 8px;
+            margin-right: 16px;
+            font-size: 17px;
+        }
+
+        @media screen and (min-width: 768px) {
+            .carousel img {
+                height: 400px;
+            }
+        }
+
+        @media screen and (max-width:700px) {
+            nav {
+                margin: 0;
+                flex-direction: column;
+            }
+        }
+    </style>
+
+<body>
+    <header>
+        Tech India
+    </header>
+    <nav>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#">Aritifical
+            Intelligence</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#"> Cloud Computinig
+        </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#"> Data
+            Mangaement</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a
+            href="#">Networking</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#">
+            Cybersecurity</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#" class="flex-align-left">
+            login/
+            signUp</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    </nav>
+
+    <div class="con">
+        <div class="carousel" data-flickity='{ "autoPlay": true }'>
+        </div>
+        <h2>Table Of Contents</h2>
+        <p><a href="#">What is Website?</a></p>
+        <p><a href="#">How Website work?</a></p>
+    </div>
+    <main>
+
+        <section class="first">
+            <p> Dictionary > Internet > Website </p>
+            <h1> <span>Website</span></h1>
+            <p> Updated :September 2021</p>
+        </section>
+
+
+        <section>
+            <h2>What Does Website Mean?</h2> <!-- Flickity HTML init -->
+            <hr>
+            <p>website is a collection of publicly accessible, interlinked Web pages that share a single domain name.
+                Websites can be created and maintained by an individual, group, business or organization to serve a
+                variety of purposes.
+
+            <p> Together, all publicly accessible websites constitute the World Wide Web.</p>
+
+            <p> Although it is sometimes called “web page,” this definition is wrong, since a website consists of
+                several webpages. A website is also known as a “web presence” or simply “site”.</p>
+            <a href="#">More than 70,000 businesses trust 1Password to keep their most important information safe [Start
+                Free Trial Now] </a>
+        </section>
+        <section>
+            <h2>Techopedia Explains Website</h2>
+
+            <p>Websites come in a nearly endless variety, including educational sites, news sites, porn sites, forums,
+                social media sites, e-commerce sites, and so on. The pages within a website are usually a mix of text
+                and other media. That said, there are no rules dictating the form of a website.</p>
+
+            <p> A person could create a website of nothing but black and white photos of roses, or the word "cat" linked
+                to another Web page with the word "mouse." However, many sites follow a standard pattern of a homepage
+                that links off to other categories and content within the website.</p>
+
+            <p> The homepage (or simply “home”) represents the main page of the site itself. Frequently, the homepage is
+                a sort of “hub” from which all other pages can be accessed. An internal web page to which several other
+                pages are linked in a coherent structure (such as a specific category of topics) is instead called a
+                “parent page.”</p>
+
+            <p> Every page is a single HTML document, and all of them are connected through hyperlinks (or simply
+                “link”) which can be combined in a navigation bar for ease of use.</p>
+
+            <p>The navigation bar is displayed on every page rather than just the homepage, and allows the user to
+                quickly move across the main website’s structure.</p>
+
+            <p> Another important section of most websites is the footer, which is another recurring section that is
+                found at the bottom of every page. Usually the fofooter, which is another recurring section that is
+                found at the bottom of every page. Usually the footer contains external links pointing to similar
+                websites and other external resources, together with other vital info such as disclaimers, links to the
+                terms of service, privacy policy and contact pages, as well as the physical address of the company that
+                owns the site.</p>
+
+            <p> Websites are hosted on servers, and require a web browser such as Chrome, Firefox, or Internet Explorer
+                to be visited (either on a computer or mobile device).</p>
+
+            <p> A website can be accessed directly by entering its URL address or by searching it on a search engine
+                such as Google or Bing.</p>
+
+            <p>Originally, websites were categorized by their top-level domains. Some examples include:</p>
+            <ul>
+                <li>Government agency websites = .gov</li>
+                <li>Educational institutions’ websites = .edu</li>
+                <li>Nonprofit organizations’ websites= .org </li>
+                <li>Commercial websites = .com </li>
+                <li>Information sites = .info</li>
+            </ul>
+            <p>Although these top-level domains extensions still exist, they say little about a website's actual
+                content. In modern days’ internet, the ".com" extension is by far the most popular domain, together with
+                many other country-specific extensions (.it, .de, .co.uk, .fr, etc.).</p>
+
+            <p> The first website was created in 1990 by Tim Berners-Lee, a British physicist at CERN. 3 years later, in
+                1993, CERN announced that everyone could access and use the World Wide Web for free.</p>
+
+
+        </section>
+
+        <section class="">
+            <h3>Relaed Videos</h3>
+            <hr>
+            <iframe width="720" height="315" src="https://www.youtube.com/embed/Q33KBiDriJY"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <p>Webiste Sources</p>
+            <br>
+
+            <iframe width="720" height="315" src="https://www.youtube.com/embed/3JluqTojuME"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <p> Website Sources</p>
+            <hr>
+
+        </section>
+    </main>
+    <footer class="d">
+
+        <div class="back">
+            <h2 class="back">Tech India</h2>
+            <div class="pic">
+                <img class="pic" src="download.jpg" alt="hgc">
+            </div>
+            <p class="back">Techopedia™ is your go-to tech source for professional IT insight and inspiration. We aim to
+                be a site
+                that isn't trying to be the first to break news stories, but instead help you better understand
+                technology and — we hope — make better decisions as a result.</p>
+
+        </div>
+        <div class="text">
+            <ul>
+                <a href="#">
+                    <li>
+                        Dictionary</li>
+                </a>
+                <a href="https://www.techopedia.com/definition/5411/website" target="blank">
+                    <li> Topics</li>
+                    <a href="http://127.0.0.1:5500/.vscode/gridchall2.html" target="blank">
+                        <li> Tutorials</li>
+                    </a>
+                    <a href="#">
+                        <li> Webinars</li>
+                    </a>
+                    <a href="#">
+                        <li> Q&A</li>
+                    </a>
+                    <a href="#">
+                        <li>Downloads</li>
+                    </a>
+            </ul>
+        </div>
+        <div class="text">
+            <ul>
+                <a href="#">
+                    <li>About</li>
+                </a>
+                <a href="#">
+                    <li> Contributors</li>
+                </a>
+                <a href="#">
+                    <li> Advertising Info</li>
+                </a>
+                <a href="#">
+                    <li> Write for Us</li>
+                </a>
+                <a href="#">
+                    <li> Guest Posting</li>
+                </a>
+                <a href="#">
+                    <li> Contact Us
+                    </li>
+                </a>
+                <a href="#">
+                    <li>Sitemap </li>
+                </a>
+            </ul>
+        </div>
+
+        <div class="c">
+            <div class="alg">
+                <h2>Follow Us</h2>
+
+                <a class="yt" href="#" target="blank" rel="noopener noreferrer"> <i class="fa fa-youtube yt fa-lg"></i>
+                </a>
+
+                <a class="ins" href="#"><i class="fa fa-instagram  insta fa-lg"></i></a>
+                <a class="fb" href="#"><i class="fa fa-facebook-square fb fa-lg"></i></a>
+                <a class="link" href="#"><i class="fa fa-linkedin link fa-lg"></i></a>
+
+            </div>
+
+            <p class="back"> Copyright © 2021 Techopedia Inc. - Terms of Use - Privacy Policy - Editorial Review </p>
+            <br>
+
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos, eius commodi? Corrupti minus, repellendus
+                voluptas fugiat officiis sit voluptatibus! Sit voluptates voluptatum nemo, beatae odio cumque id tempore
+                repudiandae corrupti.</p>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+</body>
+
+</html>
